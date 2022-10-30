@@ -24,6 +24,8 @@ Ananlysing the application by comparing actual output with desired output
 - testing pyramid
 - RTL or React Testing Library is a balance between Unit and E2E tests. RTL is focused on testing the components and user interaction.
 
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/101383635/198865774-a9f9a650-d296-47fb-9de0-04162f5e6015.png">
+
 ## Testing in React
 - JEST by default runs the test in watch mode that is only the files changed after the last commit are subjected to test
 - ```test.only``` would run these test only and skip others, ```test.skip``` skips that test
@@ -45,6 +47,9 @@ Ananlysing the application by comparing actual output with desired output
     }
 }
 ```
+
+<img width="599" alt="image" src="https://user-images.githubusercontent.com/101383635/198864845-89c23214-7f62-464c-a90f-90692ee07d39.png">
+
 
 ### General TEST anatomy
 By ```create-react-app```, alongwith the dependencies of React app we get ```App.test.jsx``` file, jest and RTL dependencies. These provides prebuilt JEST and RTL configurations for testing purposes
@@ -88,6 +93,13 @@ describe('test_group_name', () => {
 
 ### RTL Queries
 
+<img width="417" alt="image" src="https://user-images.githubusercontent.com/101383635/198865864-ec3ce913-3e6f-4acd-9e52-82a5544f30d5.png">
+
 1. getBy.. queries: class of queries that return the matching node for a query, throw a descriptive error if no elements match or if more than one match is found.
     - getByRole: checks if element with specified role exist in the document, role are like ARIA-LABELS e.g. textbox, checkbox, combobox (dropdown), button etc.
     - getByLabel: 
+
+## Resources
+1. [JEST](https://jestjs.io/docs/getting-started)
+2. [JEST DOM](https://github.com/testing-library/jest-dom)
+3. [Testing Library](https://testing-library.com/)

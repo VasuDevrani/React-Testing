@@ -89,7 +89,7 @@ describe('test_group_name', () => {
         test3;
     })
 })
-```
+text conteb
 
 ### RTL Queries
 
@@ -97,7 +97,8 @@ describe('test_group_name', () => {
 
 1. getBy.. queries: class of queries that return the matching node for a query, throw a descriptive error if no elements match or if more than one match is found.
     - getByRole: checks if element with specified role exist in the document, role are like ARIA-LABELS e.g. textbox, checkbox, combobox (dropdown), button etc.
-    - getByLabel: 
+    - getByLabelText: finds the DOM element using label text provided (either checks the label or text content of element) 
+    - getByPlaceholderText
 
 ## Resources
 1. [JEST](https://jestjs.io/docs/getting-started)

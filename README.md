@@ -89,16 +89,34 @@ describe('test_group_name', () => {
         test3;
     })
 })
-text conteb
+```
 
 ### RTL Queries
 
 <img width="417" alt="image" src="https://user-images.githubusercontent.com/101383635/198865864-ec3ce913-3e6f-4acd-9e52-82a5544f30d5.png">
 
-1. getBy.. queries: class of queries that return the matching node for a query, throw a descriptive error if no elements match or if more than one match is found.
+1. getBy.. queries: class of queries that return the matching node for a query, throw a descriptive error if **no elements match** or **if more than one match** (like if we are searching for same text that is present in two h1 tags, this will cause an error, can be solved using getAll...) is found.
+    - [Found Here](https://testing-library.com/docs/queries/about)
     - getByRole: checks if element with specified role exist in the document, role are like ARIA-LABELS e.g. textbox, checkbox, combobox (dropdown), button etc.
     - getByLabelText: finds the DOM element using label text provided (either checks the label or text content of element) 
     - getByPlaceholderText
+    - getByText used to locate ```p```,```span``` and ```div``` containing the specified text
+
+2. getAllBy.. queries can be used to return multiple matching nodes for a query which is error in the (1);
+
+3. queryBy.. & queryAllBy.. queries: returns the matching node/array of nodes for a query, returns **null** if no element is found. we can use all suffix with this type of query
+
+4. findBy & findAllBy.. queries: returns a promise
+    - promise resolves when a DOM node/array of nodes are found within **default 1000ms** time else rejects or shows error 
+    - used in case of **async code** or data fetching or time based variations.
+```
+const buttonElement = await screen.findByRole("button", 
+{
+    name: "myBtn"
+},{
+    timeout: 2000
+})
+```
 
 ## Resources
 1. [JEST](https://jestjs.io/docs/getting-started)

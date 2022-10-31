@@ -14,3 +14,10 @@ test("Greet with hello and name", () => {
   // const text = screen.getByText(\hello\i); not case sensitive
   expect(text).toBeInTheDocument();
 });
+
+test("Get the h1 heading", () => {
+  render(<Greet/>);
+  const text = screen.getByText("My world");
+  expect(text).toBeInTheDocument();
+  
+})

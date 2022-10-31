@@ -118,6 +118,29 @@ const buttonElement = await screen.findByRole("button",
 })
 ```
 
+## User Interactions
+RTL uses user-events library for testing user interactions. All user-events APIs are async
+
+1. Pointer events: 
+[Convenience APIs](https://testing-library.com/docs/user-event/convenience/)
+[Pointer APIs](https://testing-library.com/docs/user-event/pointer)
+```
+import user from '@testing-library/user-events';
+
+test("testing_pointer", async() => {
+    await user.setup();
+
+    const buttonElement = screen.getByRole("button");
+
+    await user.click(buttonElement);
+})
+```
+
+2. KeyBoard events
+
+## Custom Render
+[HERE](https://testing-library.com/docs/react-testing-library/setup#custom-render)
+
 ## Resources
 1. [JEST](https://jestjs.io/docs/getting-started)
 2. [JEST DOM](https://github.com/testing-library/jest-dom)

@@ -141,6 +141,28 @@ test("testing_pointer", async() => {
 ## Custom Render
 [HERE](https://testing-library.com/docs/react-testing-library/setup#custom-render)
 
+## EsLint
+- ESLint statically analyzes your code to quickly find problems. It is built into most text editors and you can run ESLint as part of your continuous integration pipeline.
+- ```create-react-app``` by default installs the eslint
+- eslint configs are present in package.json files
+- ```jest-dom``` configs (jest-dom testing rules) can be used by installing ```yarn add -D eslint-plugin-jest-dom``` and adding the config
+```
+"plugin:jest-dom/recomemded" 
+```
+- To run eslint using scripts, add scripts:
+```
+"lint": "eslint --ignore-path .gitignore ."
+```
+
+## Prettier
+- adding a version of prettier to project ```yarn add -D --exact prettier```
+- script 
+```
+"format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\""
+```
+- can add custom configs in ```.prettierrc.json``` file
+- ```eslint-config-prettier``` to avoid eslint-prettier conflicts
+
 ## Resources
 1. [JEST](https://jestjs.io/docs/getting-started)
 2. [JEST DOM](https://github.com/testing-library/jest-dom)
